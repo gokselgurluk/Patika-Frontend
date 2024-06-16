@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Bilgi Formu</title>
+</head>
+<body>
+    
+    <h1>Kullanici Bilgi Formu</h1>
+    <form>
+        <!--Ad Soyad-->
+        <div>
+        <label for="first-name">Ad:</label><br>
+        <input type="text" id="first-name" name="first-name" required><br><br>
+    </div>
+    <div>
+        <label for="last-name">Soyad:</label><br>
+        <input type="text" id="last-name" name="last-name" required><br><br>
+    </div>
+ <!-- E-posta -->
+  <div>
+    <label for="email">E-posta:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+</div>
+ <!-- Parola -->
+<div>
+    <label for="password">Parola</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+</div>
+<div>
+      <!-- Cinsiyet -->
+      <label>Cinsiyet:</label><br>
+      <label>Erkek</label>
+      <input type="radio" id="male" name="gender" value ="male"required>
+      <label>Kadın</label>
+      <input type="radio" id="female" name="gender" value ="female"required><br><br>
+      
+</div>
+<div>
+    <label for="favorite-fruit">Favori Meyve:</label><br>
+    <select id="favorite-fruit" name="favorite-fruit" required>
+        <option value="elma">Elma</option>
+        <option value="muz">Muz</option>
+        <option value="çilek">Çilek</option>
+    </select><br><br>
+</div>
+<div>
+   <!-- Mesaj -->
+        <label for="message">Mesaj:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    </div>
+        <!-- Gönder Butonu -->
+        <button type="submit">Gönder</button>
+  
+
+    </form>
+
+</body>
+</html>
+
