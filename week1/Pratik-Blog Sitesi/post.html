@@ -16,22 +16,38 @@
         </nav>
     </header>
     <main>
-        <article id="gonderi1">
-            
+        <article id="gonderi1" class="blog-gonderisi">
             <h2>Blog Gönderisi Başlığı 1</h2>
-            
             <p>Bu, blog gönderisi 1'in tam içeriğidir.</p>
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="görsel1">
         </article>
-        <article id="gonderi2">
+        <article id="gonderi2" class="blog-gonderisi">
             <h2>Blog Gönderisi Başlığı 2</h2>
             <p>Bu, blog gönderisi 2'nin tam içeriğidir.</p>
-            <img src="https://picsum.photos/200/300?grayscale" alt="görsel2">
-
         </article>
     </main>
     <footer>
         <p>&copy; 2024 Blog Sitesi</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // URL'den parametreleri oku
+            const urlParams = new URLSearchParams(window.location.search);
+            const gonderiId = urlParams.get('id');
+            
+            // Tüm makaleleri gizle
+            document.querySelectorAll(".blog-gonderisi").forEach(function(article) {
+                article.style.display = 'none';
+            });
+
+            // Gerekli gönderiyi göster
+            if (gonderiId) {
+                const gonderi = document.getElementById(gonderiId);
+                if (gonderi) {
+                    gonderi.style.display = 'block';
+                }
+            }
+        });
+    </script>
 </body>
 </html>

@@ -59,7 +59,7 @@ article {
     padding: 20px;
     display: flex;
     align-items: center;
-    width: 48%; /* Her iki article'ın yan yana olması için genişliği %50'den biraz daha az yapıyoruz */
+    width: 48%;
 }
 
 article img {
