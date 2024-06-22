@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <style>
+        body {
+            background-color: #a94a64; /* Arka plan rengi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #survey-form {
+            width: 260px; /* Formun genişliği */
+            height: auto; /* Formun yüksekliği */
+            background-color: #34475e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            color: #c2cfe0;
+        }
+        p{
+            color: #c2cfe0;
+        }
+        legend{
+            color: #c2cfe0;
+            
+        }
+           /* Legend ve fieldset elementlerine stiller */
+           fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        fieldset legend {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            background-color: #34475e;
+        }
+        label {
+            color: #c2cfe0;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select, textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input:invalid {
+            border-color: red;
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="survey-form" action="#" method="post">
+        <h1 id="title">Kayıt Formu</h1>
+        <p id="description">Lütfen aşağıdaki formu doldurunuz.</p>
+        
+        <label id="name-label" for="name">İsim:</label>
+        <input type="text" id="name" name="name" placeholder="İsminizi giriniz" required>
+
+        <label id="email-label" for="email">E-posta:</label>
+        <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz" required>
+
+        <label id="number-label" for="number">Sayı:</label>
+        <input type="number" id="number" name="number" placeholder="Sayı giriniz" min="1" max="100" required>
+
+        <label for="dropdown">Seçim Kutusu:</label>
+        <select id="dropdown" name="dropdown" required>
+            <option value="">Seçiniz</option>
+            <option value="option1">Seçenek 1</option>
+            <option value="option2">Seçenek 2</option>
+        </select>
+
+        <fieldset>
+            <legend>Radyo Düğmeleri</legend>
+            <label><input type="radio" name="radios" value="option1" required> Seçenek 1</label>
+            <label><input type="radio" name="radios" value="option2"> Seçenek 2</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Onay Kutuları</legend>
+            <label><input type="checkbox" name="checkbox1" value="value1" required> Onay kutusu 1</label>
+            <label><input type="checkbox" name="checkbox2" value="value2"> Onay kutusu 2</label>
+        </fieldset>
+
+        <label for="comments">Ek Yorumlar:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Eklemek istediğiniz yorumları buraya yazabilirsiniz"></textarea>
+
+        <input type="submit" id="submit" value="Gönder">
+    </form>
+</body>
+</html>
